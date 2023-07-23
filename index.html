@@ -5,20 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 </head>
 
 <body>
     <div class="heading">
         <img src="imgs/magnify.svg" alt="magnifying-glass" class="navigation">
-        <input type="text" class="navigation" placehodler="Search...">
+        <input type="text" class="navigation searchbar" placeholder="Search...">
         <img src="imgs/bell-ring-outline.svg" alt="bell-ringing" class="navigation">
         <img src="imgs/rock.png" alt="rock" class="navigation">
         <div class="navigation">Dalton Oswald</div>
     </div>
 
     <div class="profile">
-        <img src="imgs/rock.png" alt="rock" class="profile" id="profile-picture">
+        <img src="imgs/rock.png" alt="rock" id="profile-picture">
         <div class="welcome">
             <p id="greeting">Hi there,</p>
             <div id="username">Dalton Oswald (@dalton)</div>
@@ -32,8 +34,9 @@
 
     <div class="sidebar">
         <ul>
-            <div>
-                <img src="imgs/view-dashboard.svg" alt="dashboard-icon">
+            <div class="sidebar-title">
+                <!-- <img src="imgs/view-dashboard.svg" alt="dashboard-icon"> -->
+                <span class="mdi mdi-view-dashboard"></span>
                 Dashboard
             </div>
         </ul>
@@ -43,7 +46,7 @@
         <li> <img src="imgs/clock-time-five.svg" alt="history-icon">History</li>
         <li> <img src="imgs/note-multiple.svg" alt="tasks-icon">Tasks</li>
         <li> <img src="imgs/account-group.svg" alt="communities-icon">Communities</li>
-
+        <br>
         <li> <img src="imgs/cog.svg" alt="settings-icon">Settings</li>
         <li> <img src="imgs/chat-question.svg" alt="support-icon">Support</li>
         <li><img src="imgs/shield-account.svg" alt="privacy-icon">Privacy</li>
@@ -118,12 +121,10 @@
             <div class="card">
                 <p class="card-title">Site Maintenance</p>
                 <p class="card-text">This site will be undergoing maintenance. Hopefully a Twisted Bow spawn doesn't happen.</p>
-            </div>
-            <div class="card">
+            <hr>
                 <p class="card-title">Community Share Day</p>
                 <p class="card-text">Share your creations with the community! Spend some time and look through the work of others and critique each other and we can all learn!</p>
-            </div>
-            <div class="card">
+            <hr>
                 <p class="card-title">Updated Privacy Policy</p>
                 <p class="card-text">We have updated our Privacy Policy. Nobody reads it anyway so it'll be a suprise if someone even reads this announcment.</p>
             </div>
@@ -132,9 +133,26 @@
         <div class="trending">
             <div class="trending-heading">Trending</div>
             <div class="card">
-                <img src="imgs/rock.png" class="trending-picture">
-                <p class="trending-user">@dalton</p>
-                <p class="trending-user-title">Odin Project user</p>
+                <div class="trending-user">
+                    <img src="imgs/rock.png" class="trending-picture">
+                    <p class="trending-name">@dalton</p>
+                    <p class="trending-user-title">Odin Project user</p>
+                </div>
+                <div class="trending-user">
+                    <img src="imgs/rock.png" class="trending-picture">
+                    <p class="trending-name">@dalton</p>
+                    <p class="trending-user-title">Odin Project user</p>
+                </div>
+                <div class="trending-user">
+                    <img src="imgs/rock.png" class="trending-picture">
+                    <p class="trending-name">@dalton</p>
+                    <p class="trending-user-title">Odin Project user</p>
+                </div>
+                <div class="trending-user">
+                    <img src="imgs/rock.png" class="trending-picture">
+                    <p class="trending-name">@dalton</p>
+                    <p class="trending-user-title">Odin Project user</p>
+                </div>
             </div>
         </div>
 

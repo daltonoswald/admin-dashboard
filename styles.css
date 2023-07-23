@@ -3,6 +3,8 @@ body {
     grid-template-columns: 1fr 6fr;
     grid-template-rows: auto auto auto;
     margin: 0;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
 }
 
 img {
@@ -13,7 +15,9 @@ img {
     display: grid;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    grid-template-columns: 1fr 3fr 1fr 1fr 2fr;
+    grid-template-columns: 50px 5fr 50px 50px auto;
+    padding-top: 10px;
+    align-items: center;
 }
 
 .navigation {
@@ -21,26 +25,38 @@ img {
     margin-right: 20px;
     grid-row: 2 / 3;
     height: 20px;
+    font-weight: 700;
+}
+
+.searchbar {
+    background-color: #cbd0d6;
+    border-radius: 20px;
+    border-style: none;
+    padding: 4px;
 }
 
 .profile {
-    margin-left: 20px;
-    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     grid-column: 2 / 3;
     display: grid;
-    grid-template-columns: 1fr 3fr 2fr;
+    grid-template-columns: 100px 3fr 2fr;
     align-items: center;
     height: auto;
+    padding-top: 16px;
+    padding-bottom: 8px;
 }
 
 .welcome {
     grid-column: 2 / 3;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    font-weight: 700;
 }
 
 #greeting {
     font-size: 16px;
+    margin: 0;
 }
 
 #username {
@@ -48,13 +64,28 @@ img {
 }
 
 #profile-picture {
-    height: 30px;
+    height: 50px;
     grid-column: 1 / 2;
+    justify-self: end;
+    padding-right: 8px;
 }
 
 button {
     background-color: #3B82F6;
     color: white;
+    align-self: end;
+    border-radius: 50px;
+    width: 100px;
+    height: 32px;
+    font-size: 16px;
+    font-weight: 700;
+    border-style: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    gap: 20px;
 }
 
 .sidebar {
@@ -62,19 +93,52 @@ button {
     grid-row: 1 / 4;
     background-color: #3B82F6;
     color: white;
+    padding-top: 10px;
+}
+
+.sidebar img {
+    color: white;
+}
+
+.sidebar-title {
+    font-size: 24px;
+    text-align: center;
+    margin-left: 0;
 }
 
 li, ul {
+    padding: 0;
+    margin: 0;
     list-style-type: none;
+    align-self: center;
+}
+
+li {
+    font-size: 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 8px;
+    display: flex;
+    justify-self: center;
+}
+
+li img {
+    margin-right: 8px;
 }
 
 .content {
     background-color: rgb(224, 224, 224);
     display: grid;
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: 1fr 1fr;
     padding: 10px;
+    padding-right: 32px;
     gap: 10px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px black;
 }
 
 .projects {
@@ -84,7 +148,9 @@ li, ul {
     /* grid-template-columns: repeat(2, minmax(250px, 1fr)); */
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 24px 200px 200px 200px;
-    gap: 10px;
+    gap: 20px;
+    margin-top: 20px;
+    height: fill;
 }
 
 .projects-heading {
@@ -97,11 +163,13 @@ li, ul {
 .projects .card {
     background-color: white;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    width: 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    /* width: 1fr; */
     padding: 20px;
-
-    border: 1px solid black;
+    padding-top: 25px;
+    border-radius: 10px;
+    border-left: 8px solid goldenrod;
+    box-shadow: 1px 1px 3px black;
 }
 
 .card ul {
@@ -111,28 +179,66 @@ li, ul {
     justify-self: end;
 }
 
+.card-title {
+    font-weight: 700;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+}
+
+.card p {
+    margin-top: 0;
+}
+
 .announcements {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 .announcements .card {
+    margin-top: 20px;
     background-color: white;
     padding: 20px;
-    border-bottom: 1px solid black;
-    margin-left: 10px;
+}
+
+.card-text {
+    font-size: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.announcements-heading {
+    font-size: 24px;
+    height: auto;
+    
 }
 
 .trending {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 0;
 }
 
 .trending .card {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px black;
+    background-color: white;
+}
+
+.trending-user {
     background-color: white;
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 1fr;
+    padding: 5px;
 }
 
 .trending-picture {
@@ -143,7 +249,21 @@ li, ul {
     align-self: center;
 }
 
-.trending-user {
+.trending-name {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    margin: 0;
+}
+
+.trending-user-title {
+    margin: 0;
+}
+
+.trending-heading {
+    font-size: 24px;
+}
+
+svg {
+    fill: white;
+    color: white;
 }
